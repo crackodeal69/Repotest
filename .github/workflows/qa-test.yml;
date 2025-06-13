@@ -3,10 +3,11 @@ name: QA Test Workflow
 on:
   push:
     branches: [main]
+  workflow_dispatch:
 
 jobs:
-  say-hello:
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: Print QA Message
-        run: echo "✅ Workflow выполнен успешно от $GITHUB_ACTOR"
+        run: echo "This is a basic QA workflow running on push to main!"
