@@ -1,0 +1,12 @@
+name: QA Test Workflow
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print QA Message
+        run: echo "✅ Workflow выполнен успешно от $GITHUB_ACTOR"
